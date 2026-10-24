@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="app.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+  <title>Spanish Verb Trainer</title>
+</head>
+<body>
+    <nav id="navbar">
+      <ul>
+        <li>
+          <a href="french.html">
+            <div class="title">conjugreat</div>
+          </a>
+        </li>
+        <li><a href="french.html">French</a></li>
+        <li><a href="spanish.html"><span style="text-decoration:underline">Spanish</span></a></li>
+      </ul>
+    </nav>
+    <div id="settingsbtns">
+      <div><button id="mutebtn">mute sfx</button></div>
+    </div>
+    <div class="info">Conjugate the verb and enter it into the box below.</div>
+  <div id="maincontainer">
+    <div id="counterstyle"> <span id="counterdisplay"></span> <br> questions answered <span style="color:#47a500"id="correctcounterdisplay"></span><br>correct<br><span id="correctPercent"></span></div>
+  <div id="card">
+    <span id="sentencedisplay"></span> 
+    <div><input type="text" id="answerbox" placeholder="Enter the verb here..."></div>
+    <div id="accentbuttons" class="buttons">
+      <button>â</button>
+      <button>á</button>
+      <button>é</button>
+      <button>è</button>
+      <button>ó</button>
+      <button>í</button>
+    </div>
+  </div>
+  <div id="table">
+        <table>
+          <tr><th>pronoun</th><th>ending</th></tr>
+          <tr><td>yo</td><td id="yoending"></td></tr>
+          <tr><td>tú</td><td id="tuending"></td></tr>
+          <tr><td>él</td><td id="elending"></td></tr>
+          <tr><td>ella</td><td id="ellaending"></td></tr>
+          <tr><td>usted</td><td id="ustedending"></td></tr>
+          <tr><td>nosotros</td><td id="nosotrosending"></td></tr>
+          <tr><td>vosotros</td><td id="vosotrosending"></td></tr>
+          <tr><td>ellos</td><td id="ellosending"></td></tr>
+          <tr><td>ellas</td><td id="ellasending"></td></tr>
+          <tr><td>ustedos</td><td id="ustedesending"></td></tr>
+        </table>
+    </div>
+    <div><button id="hidetablebtn">toggle table</button></div>
+  </div>
+  <div id="correctstyle"><span id="correctdisplay"></span><button class="hide" id="explainbtn">Explain</button></div>
+  <div id="smallcontainer">
+    <div>Type of verb:</div>
+      <div class="buttons">
+        <button id="erbtn" class="verbbtn">-er verbs</button>
+        <button id="irbtn" class="verbbtn">-ir verbs</button>
+        <button id="arbtn" class="verbbtn">-ar verbs</button>
+      </div>
+    <div>Tense:</div>
+      <div class="buttons">
+        <div><span class="tensecategory">Past</span>
+          <button id="preteritebtn" class="tensebtn">Pretérito Perfecto Simple</button>
+          <button id="imperfectbtn" class="tensebtn">Pretérito Imperfecto</button>
+        </div>
+        <div><span class="tensecategory">Present</span>
+          <button id="presentbtn" class="tensebtn">Presente</button>
+        </div>
+        <div><span class="tensecategory">Future</span>
+          <button id="conditionalbtn" class="tensebtn">Condicional</button>
+          <button id="futurebtn" class="tensebtn">Futuro Simple</button>
+        </div>
+      </div>
+  </div>
+  <div class="info">Career Summary:</div>
+  <div id="summarycontainer">
+    <div><span id="countertitle">Presente</span>
+      <div class="counteramount" id="presentcounter"></div>
+    </div>
+    <div><span id="countertitle">Pretérito Perfecto Simple</span>
+      <div class="counteramount" id="preteritecounter"></div>
+    </div>
+    <div><span id="countertitle">Pretérito Imperfecto</span>
+      <div class="counteramount" id="imperfectcounter"></div>
+    </div>
+    <div><span id="countertitle">Conditionnel</span>
+      <div class="counteramount" id="conditionalcounter"></div>
+    </div>
+    <div><span id="countertitle">Futuro Simple</span>
+      <div class="counteramount" id="futurecounter"></div>
+    </div>
+  </div>
+  <div class="hide" id="explanationwindow"></div>
+  <div class="hide" id="overlay"></div>
+</body>
+<script src="spanish.js"></script>
+</html>   

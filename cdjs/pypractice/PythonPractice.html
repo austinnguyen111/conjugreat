@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+</head>
+<body>
+    <div class="title">py<span style="color:rgb(77, 128, 77);">practice</span>
+      <nav class="titlebarextras">
+      <a style="color:black;" href="PythonPractice.html">generate</a>
+      <a href="about.html">about</a>
+      </nav>
+    </div>
+    <h1>refine your <span style="color:rgb(77, 128, 77);">skills</span></h1>
+    <p class="titlesubtext">generate practice problems tailored to your skill level.</p>
+    <hr>
+    <p class="configure"> configure your problem:</p>
+    <div class="cardcontainer">
+      <div class="card">
+        <p class="cardtext">difficulty level:</p>
+          <div class="difficulty-options">
+            <input type="range" id="difficulty-options" min="1" max="5" value="1" step="1">
+          </div>
+            <div class="difficulty-labels">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+            </div>
+      </div>
+      <div class="card">
+      <p class="cardtext">type of problem:</p>
+        <div class="type-options">
+          <button>string</button>
+          <button>logic</button>
+          <button>list</button>
+          <button>dictionary</button>
+        </div>
+      </div>
+      <button class="generate" onclick="runPrompt()"> generate</button>
+    </div>
+    <div class="window">
+      <div class="problemstatement">
+        <h2 id="title"></h2>
+        <p id="description"></p>
+        <div id="editor"></div>
+      </div>
+      <div class="sidebar">
+        <p id="difficulty-display">difficulty: 1</p>
+        <p id="type-display">type: none</p>
+        <p id="test-cases">test cases:
+          <table>
+            <tr>
+              <th>expected</th>
+              <th>run</th>
+            </tr>
+            <tr>
+              <td>a</td>
+              <td>b</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+            <tr>
+              <td>c</td>
+              <td>d</td>
+            </tr>
+          </table>
+        </p>
+        <div>
+        <button onclick="hintdropdown()" class="hint">hint</button>
+        <div id="hintcontent" class="dropdowncontent">
+          <p id="hint"></p>
+        </div>
+        <button onclick="solutiondropdown()" class="solution">solution</button>
+        <div id="solutioncontent" class="dropdowncontent">
+          <p id="solution"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
