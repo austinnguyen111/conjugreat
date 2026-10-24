@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="app.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+  <title>French Verb Trainer</title>
+</head>
+<body>
+    <nav id="navbar">
+      <ul>
+        <li>
+          <a href="french.html">
+            <div class="title">conjugreat</div>
+          </a>
+        </li>
+        <li><a href="french.html"><span style="text-decoration:underline">French</span></a></li>
+        <li><a href="spanish.html">Spanish</a></li>
+      </ul>
+    </nav>
+    <div id="settingsbtns">
+      <div><button id="mutebtn">mute sfx</button></div>
+    </div>
+    <div class="info">Conjugate the verb and enter it into the box below.</div>
+  <div id="maincontainer">
+    <div id="counterstyle"> <span id="counterdisplay"></span> <br> questions answered <span style="color:#47a500"id="correctcounterdisplay"></span><br>correct<br><span id="correctPercent"></span></div>
+    <div id="card">
+      <span id="sentencedisplay"></span> 
+      <div><input type="text" id="answerbox" placeholder="Enter the verb here..."></div>
+      <div id="accentbuttons" class="buttons">
+        <button>â</button>
+        <button>é</button>
+        <button>è</button>
+      </div>
+    </div>
+    <div id="table">
+        <table>
+          <tr><th>pronoun</th><th>ending</th></tr>
+          <tr><td>je</td><td id="jeending"></td></tr>
+          <tr><td>tu</td><td id="tuending"></td></tr>
+          <tr><td>il</td><td id="ilending"></td></tr>
+          <tr><td>elle</td><td id="elleending"></td></tr>
+          <tr><td>on</td><td id="onending"></td></tr>
+          <tr><td>nous</td><td id="nousending"></td></tr>
+          <tr><td>vous</td><td id="vousending"></td></tr>
+          <tr><td>ils</td><td id="ilsending"></td></tr>
+          <tr><td>elles</td><td id="ellesending"></td></tr>
+        </table>
+    </div>
+    <div><button id="hidetablebtn">toggle table</button></div>
+  </div>
+  <div id="correctstyle"><span id="correctdisplay"></span><button class="hide" id="explainbtn">Explain</button></div>
+  <div id="smallcontainer">
+    <div>Type of verb:</div>
+      <div class="buttons">
+        <button id="erbtn" class="verbbtn">-er verbs</button>
+        <button id="irbtn" class="verbbtn">-ir verbs</button>
+        <button id="rebtn" class="verbbtn">-re verbs</button>
+    <div id="tenselabel">Tense:</div>
+      <div class="buttons">
+        <div><span class=tensecategory>Past</span>
+          <button id="imperfectbtn" class="tensebtn">Imparfait</button>
+          <button id="compoundpastbtn" class="tensebtn">Passé Composé</button>
+          <button id="pasthistoricbtn" class="tensebtn">Passé Simple</button>
+          <button id="pastperfectbtn" class="tensebtn">Plus-Que-Parfait</button>
+        </div>
+        <div><span class=tensecategory>Present</span>
+          <button id="presentbtn" class="tensebtn">Présent</button>
+          <button id="presentsubbtn" class="tensebtn">Subjonctif Présent</button>
+        </div>
+        <div><span class=tensecategory>Future</span>
+          <button id="futurebtn" class="tensebtn">Futur Simple</button>
+          <button id="conditionalbtn" class="tensebtn">Conditionnel Présent</button>
+          <button id="nearfuturebtn" class="tensebtn">Futur Proche</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="info">Overall Correct Summary:</div>
+  <div id="summarycontainer">
+    <div><span>Imparfait</span>
+      <div class="counteramount" id="imperfectcounter"></div>
+    </div>
+    <div><span>Passé Composé</span>
+      <div class="counteramount" id="compoundpastcounter"></div>
+    </div>
+    <div><span>Passé Simple</span>
+      <div class="counteramount" id="pasthistoriccounter"></div>
+    </div>
+    <div><span>Plus-Que-Parfait</span>
+      <div class="counteramount" id="pastperfectcounter"></div>
+    </div>
+    <div><span>Présent</span>
+      <div class="counteramount" id="presentcounter"></div>
+    </div>
+    <div><span>Conditionnel Présent</span>
+      <div class="counteramount" id="conditionalcounter"></div>
+    </div>
+    <div><span>Futur Proche</span>
+      <div class="counteramount" id="nearfuturecounter"></div>
+    </div>
+    <div><span>Futur Simple</span>
+      <div class="counteramount" id="futuresimplecounter"></div>
+    </div>
+    <div><span>Subjonctif Présent</span>
+      <div class="counteramount" id="presentsubcounter"></div>
+    </div>
+  </div>
+  <div class="hide" id="explanationwindow"></div>
+  <div class="hide" id="overlay"></div>
+</body>
+<script src="french.js"></script>
+</html>   
